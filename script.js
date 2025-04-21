@@ -46,14 +46,19 @@ document.getElementById("whatsappLink").addEventListener("click", function (e) {
 
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
-
+    const form = this;
     emailjs.send("service_4pq8ula", "template_alnhwoa", {
-      full_name: this.full_name.value,
-      email: this.email.value,
-      phone: this.phone.value,
-      message: this.message.value
+      full_name: form.full_name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+
     }).then(function (response) {
       alert("Message sent successfully!");
+            form.full_name.value = '';
+            form.email.value = '';
+            form.phone.value = '';
+            form.message.value = '';
       console.log("SUCCESS!", response.status, response.text);
     }, function (error) {
       alert("Failed to send message.");
