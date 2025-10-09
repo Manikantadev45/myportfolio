@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -21,6 +22,7 @@ overflow-x: hidden;
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
+      font-family: "Poppins", sans-serif;
 }
 .header{
     position: fixed;
@@ -669,5 +671,38 @@ display: block;
  }
  .inputfield:hover{
    transform: scale(1.05);
+   box-shadow: 0 0 50px var(--main-color);
+ }
+.skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      background: rgba(20, 20, 20, 0.8);
+      padding: 30px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .skill-box {
+      background: #111;
+      padding: 15px;
+      height: auto;
+      width: auto;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+        color: white;
+      border: 1px solid #00f0ff;
+      box-shadow: 0 0 5px #00f0ff inset;
+      gap: 10px;font-size: medium;
+    }
+
+    .skill-box img {
+      width: 30px;
+    }
+.skill-box:hover{
+   transform: scale(1.05);
+background-color: white;
+    color : var(--main-color);
    box-shadow: 0 0 50px var(--main-color);
  }
