@@ -23,19 +23,19 @@ window.onscroll = () => {
         }
     });
 };
- document.addEventListener("keydown", function (e) {
-     if (
-         e.key === "F12" || 
-         (e.ctrlKey && e.shiftKey && e.key === "I") || 
-         (e.ctrlKey && e.shiftKey && e.key === "J") || 
-         (e.ctrlKey && e.key === "U")
-     ) {
-         e.preventDefault();
-     }
- });
- document.addEventListener("contextmenu", function (e) {
-     e.preventDefault();
- });
+  document.addEventListener("keydown", function (e) {
+      if (
+          e.key === "F12" || 
+          (e.ctrlKey && e.shiftKey && e.key === "I") || 
+          (e.ctrlKey && e.shiftKey && e.key === "J") || 
+          (e.ctrlKey && e.key === "U")
+      ) {
+          e.preventDefault();
+      }
+  });
+  document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+  });
 document.getElementById("whatsappLink").addEventListener("click", function (e) {
     e.preventDefault();
     const phoneNumber = "917013063222"; 
@@ -65,5 +65,3 @@ document.getElementById("whatsappLink").addEventListener("click", function (e) {
       console.log("FAILED...", error);
     });
   });
-
-
