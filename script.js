@@ -65,3 +65,36 @@ document.getElementById("whatsappLink").addEventListener("click", function (e) {
       console.log("FAILED...", error);
     });
   });
+   const skillLinks = {
+    "C#": "https://www.w3schools.com/cs/",
+    "ASP.NET Core": "https://learn.microsoft.com/en-us/aspnet/core/get-started?view=aspnetcore-10.0",
+    "Angular": "https://www.w3schools.com/angular/",
+    "TypeScript": "https://www.w3schools.com/typescript/",
+    "JavaScript": "https://www.w3schools.com/js/",
+    "SQL Server": "https://www.w3schools.com/sql/",
+    "HTML5": "https://www.w3schools.com/html/",
+    "CSS3": "https://www.w3schools.com/css/",
+    "Bootstrap": "https://www.w3schools.com/bootstrap5/",
+    "Blazor": "https://learn.microsoft.com/en-us/aspnet/core/blazor/tutorials/?view=aspnetcore-10.0", 
+    "Azure": "https://azure.microsoft.com/en-us/solutions/devops/tutorial",
+    "Visual Studio": "https://learn.microsoft.com/en-us/visualstudio/get-started/visual-studio-ide?view=visualstudio",
+    "VS Code": "https://learn.microsoft.com/en-us/shows/visual-studio-code/",
+    "Git": "https://www.w3schools.com/git/",
+    "GitHub": "https://www.w3schools.com/git/",
+    "Unit Testing": "https://learn.microsoft.com/en-us/visualstudio/test/getting-started-with-unit-testing?view=visualstudio&tabs=dotnet%2Cmstest",
+    "LINQ": "https://learn.microsoft.com/en-us/dotnet/csharp/linq/",
+    "Postman": "https://learning.postman.com/docs/getting-started/overview/"
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".skill-box").forEach(box => {
+      box.addEventListener("click", () => {
+        let skillName = box.innerText.trim();
+        if (skillLinks[skillName]) {
+          window.open(skillLinks[skillName], "_blank");
+        } else {
+          alert("Link not found for: " + skillName);
+        }
+      });
+    });
+  });
